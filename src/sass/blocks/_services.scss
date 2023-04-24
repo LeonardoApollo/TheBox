@@ -1,0 +1,60 @@
+.services {
+    padding: 44px 216px 76px 216px;
+    background: #F6F8F7;
+    &__title {
+        text-align: center;
+        h2 {
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 42px;
+            color: #292E3D;
+        }
+    }
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(261px, 1fr));
+        grid-template-rows: repeat(2, 181px);
+        row-gap: 48px;
+        column-gap: 98px;
+        max-width: 1008px;
+        justify-items: center;
+        margin: 36px auto 0 auto;
+    }
+    &__card {
+        padding: 38px 0px;
+        display: flex;
+        flex-direction: column;
+        min-width: 271px;
+        min-height: 181px;
+        background: #FFFFFF;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 0px 37px -2px rgba(17, 24, 39, 0.05);
+        border-radius: 4px;
+        transition: all linear .3s;
+        &_divider {
+            margin-top: 20px;
+            width: 60px;
+            height: 2px;
+            background: #E0E3EB;
+        }
+        &_text {
+            margin-top: 20px;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 23px;
+            color: #2947A9;
+        }
+        &:hover {
+            background: #2947A9
+        }
+        &.active {
+            .services__card_text {
+                color: #FFFFFF;
+            }
+            .change {
+                fill: #FFFFFF;
+            }
+        }
+    }
+}

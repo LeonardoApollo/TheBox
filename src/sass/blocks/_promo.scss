@@ -1,0 +1,97 @@
+.promo {
+    background: url('../../img/images/Promo.jpg') center (center/cover) no-repeat;
+    min-height: 646px;
+    position: relative;
+    &__title {
+        position: absolute;
+        bottom: 239px;
+        left: 112px;
+        margin: 0 auto;
+        max-width: 556px;
+        h1 {
+            font-weight: 600;
+            font-size: 72px;
+            line-height: 84px;
+            color: #292E3D;
+            margin: 0;
+        }
+    }
+}
+
+
+.feature {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #3559C7;
+    border-radius: 2px 2px 0px 0px;
+    min-height: 190px;
+    min-width: 415px;
+    display: grid;
+    grid-template-rows: 63px 87px 40px;
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 20px;
+        h2 {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 23px;
+            color: #FFFFFF;
+            margin: 0;
+        }
+    }
+    &__text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 100%;
+        text-align: center;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        color: #FFFFFF;
+        max-width: 312px;
+    }
+    &__controls {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        justify-items: center;
+        align-items: center;
+        cursor: pointer;
+        background: #292E3D;
+        &_back {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 100%;
+            min-height: 100%;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 21px;
+            color: #FFFFFF;
+            border-right: 1px solid #FFFFFF;
+        }
+        &_next {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 100%;
+            min-height: 100%;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 21px;
+            color: #FFFFFF;
+            border-left: 1px solid #FFFFFF;
+        }
+    }
+}
+
+.arrow__back {
+    margin-right: 10px;
+}
+
+.arrow__next {
+    margin-left: 10px;
+}
