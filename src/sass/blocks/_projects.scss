@@ -1,0 +1,81 @@
+.projects {
+    padding-top:88px;
+    padding-bottom: 138px;
+    &__wrapper {
+        display: flex;
+        justify-content: space-around;
+    }
+    &__nav {
+        &_list {
+            margin-top: 40px;
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 0;
+            &-item {
+                margin-top: 20px;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 28px;
+                color: #C2C7D6;
+                cursor: pointer;
+                &:nth-child(1) {
+                    margin-top: 0;
+                }
+            &.active {
+                position: relative;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 28px;
+                color: #2947A9;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 4px;
+                    height: 100%;
+                    background: #2947A9;
+                    left: -1em;
+                }
+            }
+            }
+        }
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 42px;
+        color: #292E3D;
+    }
+    .owl-carousel {
+        max-width: 800px;
+        max-height: 790px;
+        
+        .owl-item {
+            min-width: 384px;
+            min-height: 331px;
+            .item__wrapper {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 30px;
+            }
+            .item {
+                &__desc {
+                    padding: 12px 12px 16px;
+                    background: #2947A9;
+                    &_title {
+                        font-weight: 700;
+                        font-size: 20px;
+                        line-height: 23px;
+                        color: #FFFFFF;
+                    }
+                    &_text {
+                        margin-top: 12px;
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 21px;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+    }
+}

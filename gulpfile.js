@@ -226,7 +226,7 @@ const develop = (ready) => {
     ready();
 };
 
-export const base = gulp.parallel(html, scss, js, image, webp, copy); // avif
+export const base = gulp.parallel(html, scss, js, image, copy); // avif webp
 
 export const build = gulp.series(clear, base);
 
