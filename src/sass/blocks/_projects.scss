@@ -47,16 +47,20 @@
     }
     .owl-carousel {
         max-width: 800px;
+        overflow-x: hidden;
         max-height: 790px;
-        
+
+        .owl-stage {
+            display: grid;
+            grid-template-columns: 384px;
+            grid-template-rows: repeat(2, 331px);
+            grid-auto-flow: column;
+            grid-auto-columns: 384px;
+            gap: 30px;
+        }
         .owl-item {
             min-width: 384px;
             min-height: 331px;
-            .item__wrapper {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 30px;
-            }
             .item {
                 &__desc {
                     padding: 12px 12px 16px;
@@ -73,6 +77,45 @@
                         font-size: 18px;
                         line-height: 21px;
                         color: #FFFFFF;
+                    }
+                }
+            }
+        }
+        .owl-nav {
+            display: flex;
+            justify-content: space-between;
+            button {
+                width: 295px;
+                height: 64px;
+                background: #292E3D;
+                &:hover {
+                    background: #292E3D !important;
+                }
+            }
+            .owl-prev {
+                &.disabled {
+                    opacity: 0.7 !important; 
+                }
+            }
+            .owl-next {
+                &.disabled {
+                    opacity: 0.7 !important; 
+                }
+            }
+        }
+        .owl-dots {
+            position: absolute;
+            left: 47%;
+            bottom: 17px;
+            .owl-dot {
+                span {
+                    width: 16px;
+                    height: 16px;
+                    background: #F6F8F7;;
+                }
+                &.active {
+                    span {
+                        background: #2947A9 !important;
                     }
                 }
             }
