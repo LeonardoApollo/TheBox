@@ -7,8 +7,8 @@ $(document).ready(function () {
   const commercial = document.querySelector('#commercial');
   const residential = document.querySelector('#residential');
   const other = document.querySelector("#other");
-  const carousel = document.querySelector('.owl-carousel');
-  console.log(carousel);
+  const hamburger = document.querySelector('.hamburger');
+  const burger = document.querySelector('.menu');
   card.forEach(el => {
     el.addEventListener("mouseover", () => {
       el.classList.add('active');
@@ -18,14 +18,43 @@ $(document).ready(function () {
     }, false);
   });
   const owl = $(".owl-carousel").owlCarousel({
-    items: 4,
     nav: true,
-    navText: [`<img src="img/icons/Arrow_left.png" alt="left">`, `<img src="img/icons/Arrow_right.png" alt="right">`]
+    margin: 0,
+    navText: [`<img src="img/icons/Arrow_left.png" alt="left">`, `<img src="img/icons/Arrow_right.png" alt="right">`],
+    responsiveClass: true,
+    responsive: {
+      994: {
+        items: 4
+      },
+      0: {
+        items: 1
+      }
+    }
   });
   $('.projects__nav_list').on('click', '.projects__nav_list-item', function () {
     var $item = $(this);
     var filter = $item.data('owl-filter');
     owl.owlcarousel2_filter(filter);
+  });
+  let header = $('#header');
+  let introH = $("#Home").innerHeight();
+  let scrollOffset = $(window).scrollTop();
+  checkScroll(scrollOffset);
+  $(window).on("scroll", function () {
+    scrollOffset = $(this).scrollTop();
+    checkScroll(scrollOffset);
+  });
+  function checkScroll(scrollOffset) {
+    if (scrollOffset >= introH) {
+      header.addClass("fixed");
+    } else {
+      header.removeClass("fixed");
+    }
+  }
+  ;
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle('active');
+    burger.classList.toggle('active');
   });
   all.addEventListener("click", event => {
     all.classList.toggle('active');

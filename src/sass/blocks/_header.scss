@@ -1,7 +1,10 @@
 .header {
     padding: 0 120px;
     min-height: 80px;
+    width: 100%;
     display: flex;
+    background-color: #FFFFFF;
+    z-index: 10000;
     justify-content: space-between;
     &__logo {
         display: flex;
@@ -13,6 +16,9 @@
             line-height: 35px;
             color: #2947A9;
         }
+    }
+    &.fixed {
+        position: fixed;
     }
 }
 
@@ -51,5 +57,42 @@
             }
         }
     }
-
 }
+
+.hamburger {
+    margin-top: 10px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    height: 21px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 2000;
+    cursor: pointer;
+    span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background: black;
+    }
+    span.long {
+        width: 36px;
+    }
+    &.active {
+        margin-top: 20px;
+        span.long {
+            display: none;
+        }
+        span {
+            background: #FFFFFF;
+            transform: rotate(45deg);
+        }
+        span.lower {
+            transform: rotate(-45deg);
+            margin-bottom: 20px;
+        }
+    }
+}
+
